@@ -22,3 +22,14 @@ p 5.next
 puts ".class: gives blueprint that was used to create object"
 p 5.class
 p 2.75.class
+
+#CONVERT NUM TO STRING
+str = "5"
+p str.to_i 
+num = 10
+p num.to_f
+p num.to_s
+
+pie = 3.14
+p pie.to_i
+p pie.to_s
