@@ -9,8 +9,3 @@
 
 # puts "Cool, So your name is #{name} and you are #{age} years old!"
 
-#BOOLEAN METHODS
-p 10.odd?
-p 2.even?
-p 5.even?
-p 6.odd?
