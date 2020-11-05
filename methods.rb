@@ -32,3 +32,27 @@
 #     puts"Here we go again"
 #     puts "now on #{num}"
 # end
+
+# INCLUDE METHODS
+## checks to see if your arg is included in the object
+## can normalize string (set it to all lowercase or all uppercase)
+
+# name = "Naruto Uzamaki"
+
+# p name.include?("N")
+# p name.include?("z")
+
+
+# EMPTY and NIL methods
+
+## boolean methods
+## only return true or false
+
+## string is empty -> empty?
+##nil objects mean nothingness
+
+# name = "Goofy troupe"
+# other =''
+# last_name = name[400, 4]
+# p last_name.nil?
+# p other.empty?
