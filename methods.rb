@@ -56,3 +56,60 @@
 # last_name = name[400, 4]
 # p last_name.nil?
 # p other.empty?
+
+
+# CREATING A METHOD
+#starts with def ends with the word end
+
+# def introduce_myself
+#     puts "I am lit"
+#     puts "I am Choz3n"
+#     puts "I am Faithful"
+# end
+# introduce_myself() #parentheses are optional
+
+# Local Variables 
+## variables defined within methods are not seeable or reachable outside of the method
+
+# def hello
+#     expression = "Hello World!"
+#     p expression.swapcase
+# end
+
+# hello()
+
+# ARGUMENTS & PARAMETERS
+## can have 1 or more inputs
+
+# def message()
+#    puts "Who are you sending a message to?"
+#    to_name = gets.chomp
+#    puts "Who is the message from?"
+#    from_name = gets.chomp
+#    puts "What is your message?" 
+#    message = gets.chomp
+#    time = Time.now
+#    puts "---BEGIN OF MESSAGE ---" 
+#    puts "Message Received at: #{time.strftime("%I:%M %p")}"
+#    puts "[+] To: #{to_name}: #{message}"
+#    puts "--- From: #{from_name}"
+#    puts "---END OF MESSAGE---"
+# end
+
+# puts "Do you want to send another message?"
+
+#If yes call message again, if no print goodbye
+
+# RETURN VALUES
+## explicit returns happen when you use the word return
+## without the return it will return the last method used in the last line.
+## use return when you need to return from a method early.
+# def add(num1, num2)
+#     puts "calculating"
+#     return num1 + num2 #explicit return
+# end
+
+# p add(3,5)
+
+
+
