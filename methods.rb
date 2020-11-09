@@ -113,3 +113,21 @@
 
 
 
+# respond_to? Method
+## tests to see if a particular method can be used on it.
+# num = 100
+
+# p num.respond_to?("next") # -> true
+# p num.respond_to?("length") # -> false, Number objects do not have a length method
+
+# if num.respond_to?("next")
+#     p num.next
+# elsif num.respond_to?("length")
+#     p num.length
+# end
+#symbols used to give something a label
+## use case: lightweight, not using as much memory as its string syntax -> .respond_to?("next")
+  ## returns true or false
+  ##can use it to check if something exist to safe guard against the program erroring out
+# puts num.respond_to?(:next)
+

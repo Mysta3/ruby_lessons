@@ -41,3 +41,34 @@
 # if age < 21 || ticket == 'Gen'
 #     puts 'You are not allowed to drink'
 # end
+
+# NESTED STRINGS
+
+# def meal_plan(time_of_week, time_of_day)
+#     if time_of_week == 'weekday'
+#         if time_of_day == 'breakfast'
+#             puts "Cereal"
+#         elsif time_of_day == 'noon'
+#             puts "apple"
+#         elsif time_of_day == 'dinner'
+#             puts "salmon"
+#         end
+
+#     elsif time_of_week == 'weekend'
+#         if time_of_day == 'breakfast'
+#             puts "Candy"
+#         elsif time_of_day == 'noon'
+#             puts "apple"
+#         elsif time_of_day == 'dinner'
+#             puts "salmon"
+#         end
+#     end
+# end
+
+# meal_plan('weekend','noon')
+
+# Ternary Operator
+
+## Structure -> condition ? output if condition is true : output if condition is fales
+# puts 1 < 2 ? "ok" : 'Dub'
+# puts 3.even? ? 'its even' : 'its odd'
