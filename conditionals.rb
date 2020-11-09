@@ -72,3 +72,6 @@
 ## Structure -> condition ? output if condition is true : output if condition is fales
 # puts 1 < 2 ? "ok" : 'Dub'
 # puts 3.even? ? 'its even' : 'its odd'
+pokemon = 'Pickachu'
+
+puts pokemon == 'Charizard' ? 'Fireball!!' : 'That is not Charizard!'

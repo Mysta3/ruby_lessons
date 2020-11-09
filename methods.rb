@@ -131,3 +131,37 @@
   ##can use it to check if something exist to safe guard against the program erroring out
 # puts num.respond_to?(:next)
 
+# DEFAULT or OPTIONAL PARAMETERS
+## should be placed at the end of the params list
+
+# def make_phone_call(number, international_code = 1, area_code = 443)
+#     puts "Dialing..."
+#     puts "Calling: #{international_code}-#{area_code}-#{number}"
+# end
+
+# make_phone_call(123456)
+
+# Call Method from within another method or from string interpolation
+# def add(a,b)
+#     a + b
+# end
+
+# def sub(a,b)
+#     a - b
+# end
+
+# def multi(a,b)
+#     a * b 
+# end
+
+# def calculated(a, b, operation="add")
+#     if operation == "add"
+#        p "the result of adding is #{add(a,b)}"
+#     elsif operation == "sub"
+#        p sub(a,b)
+#     elsif operation == "multi"
+#       p  multi(a,b)
+#     end
+# end
+
+# calculated(5, 4, "sub")
