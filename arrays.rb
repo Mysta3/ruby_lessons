@@ -186,3 +186,30 @@
 # p a == c  # -> false
 # p a != c  # -< true
 
+# SPACESHIP OPERATOR
+## only returns -1 ,0, 1, nil
+## if both values are equal it returns 0
+# p 5 <=> 5
+# # if right side is greater or value on left side is smaller it returns -1
+# p 5 <=> 10
+# #if right is smaller will return 1
+# p 10 <=> 2
+# #nil is returned when operation cannot be compared
+# a = [1,2,3,4]
+# b = [1,2,3,4]
+# c = [1,3,4]
+# p 10 <=> a # -> returns nil
+# p a <=> b # -> returns 0
+# p a <=> c # -> returns -1
+
+#CONVERT RANGE TO ARRAY 
+# letters_range = "a".."t"
+# p "this is a range: #{letters_range}"
+# arr = letters_range.to_a 
+# p "This is the conversion to an array: #{arr}"
+
+# numbers_range = 1..10
+# p "this is a range object: #{numbers_range}"
+
+# new_arr = numbers_range.to_a
+# p new_arr

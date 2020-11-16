@@ -165,3 +165,11 @@
 # end
 
 # calculated(5, 4, "sub")
+
+# is_a? Method
+## retursn true of false depending on the class you are checking
+#  a = "pineapple"
+#  b = []
+#  c = 2
+#  p a.is_a?(Array)
+#  p a.is_a?(String)
