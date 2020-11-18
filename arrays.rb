@@ -213,3 +213,156 @@
 
 # new_arr = numbers_range.to_a
 # p new_arr
+
+
+# EACH METHOD
+# candies = ["Snickers", "Reeses", "Take 5", "Twix"]
+
+# candies.each do |candy|
+#     puts candy
+# end
+
+# # OR
+
+# candies.each{ 
+#     |candy| 
+#     puts candy.upcase 
+# }
+
+# number = 0
+
+# [1,2,3,4,5,6,7,8,9,10].each do |num|
+#     square = num * num
+#     number += 1
+#     puts " #{number}: quare of #{num} is #{square}"
+# end
+
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+
+# numbers.each do |number|
+#     if number.even?
+#         puts number
+#     end
+# end
+# even_nums = []
+# odd_nums = []
+# numbers.each do |num|
+#     if num.even?
+#         # even_nums.push(num)
+#         even_nums << num
+#     elsif  num.odd?
+#         # odd_nums.push(num)
+#         odd_nums << num
+#     end
+# end
+
+# REFACTOR 
+# numbers.each do |num|
+#     num.even? ?  even_nums << num : odd_nums << num
+# end
+
+# REFACTOR 2
+
+# numbers.each{ |num| num.even? ?  even_nums << num : odd_nums << num }
+
+# p "Even: #{even_nums}"
+# puts "--------------------"
+# p "Odd: #{odd_nums}"
+
+# shirts = ["striped", "plain white", "plaid", "band"]
+# ties = ["polka dot", "solid color", "boring"]
+
+# shirts.each do |shirt|
+#     ties.each do |tie|
+#         puts "Options: A #{shirt} shirt and a #{tie} tie."
+#     end
+# end
+
+# FOR LOOP 
+## not as secure as each method
+# numbers = [1,2,3]
+
+# for num in numbers
+#     puts num
+# end
+
+# colors = %w[Red Blue Green Yellow]
+
+# colors.each_with_index do |color, index|
+#     puts "#{color} | #{index}"
+# end
+
+# arr = [1,2,3,4,5]
+
+# total = 0
+# arr.each_with_index do |num, i|
+#     total += (num * i)
+# end
+# puts total
+
+# arr = [-1,2,1,2,5,7,3]
+
+# def printProducts(arr)
+#     arr.each_with_index do |num, i|
+#         if i > num 
+#             puts "Values: #{i}|#{num}"
+#             puts "Product: #{num * i}"
+#         end
+#     end
+
+# end
+
+# printProducts(arr)
+
+# MAP & COLLECT
+# nums = [1,2,3,4,5]
+# # squares = nums.map { |item|  item ** 2 }
+# squares = nums.collect { |item|  item ** 2 }
+# p squares
+
+## -> collect method returns a brand new array
+
+# def cubes(array)
+#     array.map{ |num| num ** 3}
+# end
+# p cubes(nums)
+
+# animals = %w[Lion Tiger Bear Zebra]
+
+# i = 0
+# while i < animals.length
+#     puts animals[i]
+#     i += 1
+# end 
+
+# BREAK KEYWORD -> stops the program form running. Like the return keyword
+# prizes = %w[pyrite pyrite pyrite gold pyrite]
+
+# i = 0
+# while i < prizes.length
+#     current = prizes[i]
+#     if current == "gold"
+#         puts" found it!"
+#         break
+#     else
+#         puts "not gold"
+#     end
+#     i += 1
+# end
+
+# NEXT KEYWORD
+# prizes = %w[gold gold gold pyrite gold silver copper]
+
+# prizes.each do |item|
+#     unless item == 'gold'
+#         next 
+#     else
+#         puts "i found it! - #{item}"
+#     end
+# end
+
+# REVERSE METHOD
+p [1,2,3].reverse
+p ["A","B","C"].reverse
+p "hElLo".reverse.swapcase
+## array.reverse! used to mutate array stored in variable
