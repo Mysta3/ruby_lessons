@@ -447,3 +447,53 @@
 # end
 # p matches
 
+# REJECT METHOD
+# -> called on an array
+# -> accepts a block
+# -> rejects all elements that return true within the block
+# -> returns all false items
+
+# animals = %w[cheetah cat lion elephant dog cow]
+
+# results = animals.reject { |animal| animal.include?("c")}
+# p results
+
+# UNPACK A MULTIDIMENSIONAL ARRAY
+
+# users = [
+#     ["Bob", 25, "male"], 
+#     ["Sally", 48, "female"], 
+#     ["Larry", 65, "male"]
+#     ]
+# bob, susan, larry = users
+# #if you only assign 1 less variable to the assignment it will still work.
+# p bob
+# p susan
+# p larry
+
+# PARTITION METHOD
+# -> returns 2 arrays within a larger array
+# -> 1st array will contain items that are true for the statement in the block
+# -> 2nd array will contain items that are false for the statement in the block
+# foods = ["Steak", "Vegetables", "Steak Burger", "Kale", "Tofu", "Tuna Steaks"]
+
+# good, bad = foods.partition{ |food| food.include?("Steak") }
+# #splits food array based on Steak 
+
+#  p good
+#  p bad
+
+# CODING EXERCISE
+# def evens_and_odds(numbers)
+#     # Write your code here
+#     odd, even = numbers.partition{ |num| num.odd?}
+#     p odd
+#     p even
+#   end
+
+# numbers = [15,23,55]
+# evens_and_odds(numbers)
+
+# [10, 1, 6, 4, 8, 10, 4].each_with_index do |number, i|
+#     puts number * i * 2
+# end
