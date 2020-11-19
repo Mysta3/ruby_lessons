@@ -362,7 +362,88 @@
 # end
 
 # REVERSE METHOD
-p [1,2,3].reverse
-p ["A","B","C"].reverse
-p "hElLo".reverse.swapcase
+# p [1,2,3].reverse
+# p ["A","B","C"].reverse
+# p "hElLo".reverse.swapcase
 ## array.reverse! used to mutate array stored in variable
+
+# SORT METHOD
+## sorts asc order with numbeers
+## sorts alphabetically with strings
+
+# numbers = [10,8,6,9,5,3,2,5,1]
+# p numbers.sort
+# p numbers.sort.reverse
+# words = ["apple", "zebra", "cat"]
+# p words.sort
+
+# CONCAT
+## -> mutates original array
+# anime_Characters = ["Naruto", "Asta", "Itachi", "Goku", "Archer"]
+# anime_show = ["Naruto", "Black Clover", "Naruto Shippuden", "DBZ", "Fate/Stay Night"]
+
+# p anime_Characters.concat(anime_show)
+
+# a = [1,2,3]
+# b = [4,5,6]
+
+# def custom_concat(arr1, arr2)
+#     arr2.each {|num| arr1 << num }
+#     p arr1
+# end
+
+# custom_concat(a,b)
+
+# MIN & MAX METHODS
+# stock_prices = [723.99, 434.12, 84.7, 649.92]
+# p stock_prices.max
+# p stock_prices.min
+## -> for Strings - the element with the furthest letter from a.
+
+# def custom_max(arr)
+#  sorted_arr = arr.sort
+#  p sorted_arr[arr.length - 1]
+# end
+
+# custom_max(stock_prices)
+
+# def custom_min(arr)
+#     sorted_arr = arr.sort
+#  p sorted_arr[0]
+# end
+
+# custom_min(stock_prices)
+
+# INCLUDE METHOD
+## -> takes an argument to look for within an object
+## -> returns a true or false
+## -> it is case-sensitive
+
+# alpha = %[a b c d e]
+# p alpha.include?("a")
+# p alpha.include?("A")
+# p alpha.include?("z")
+
+# INDEX & FIND_INDEX
+## index -> returns the index of the argument
+## returns the first occurence
+
+##find_index -> older but does the same thing
+## if no value is found it will return nil
+
+# colors = %[Red Blue Green Red]
+# p colors.index("Orange")
+# p colors.index("Blue")
+
+
+# SELECT
+## -> takes a block similar to the each method
+## -> whatever that is in the block must evaluate to a true or false
+
+# grades = [80, 95 , 13, 76, 28, 39]
+
+# matches = grades.select do |number|
+#     number >= 75
+# end
+# p matches
+
