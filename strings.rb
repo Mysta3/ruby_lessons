@@ -218,3 +218,27 @@
 #     final
 # end
 # p custom_squeeze(sentence)
+
+#CLEAR METHOD
+## clears out the string
+## does not need a bang (!) to mutate the original object
+# word = "hello"
+# word.clear
+# p word
+
+# DELETE METHOD
+## removes all characters specified on a string
+## there can be more than one character
+## add the bang to mutate the original string.
+
+# word = "Hello World"
+# word.delete!("l")
+# p word
+
+# def custom_delete(string, delete_characters)
+#     new_string = ""
+#     string.each_char { |char| new_string << char unless delete_characters.include?(char) }
+#     new_string
+# end
+
+# p custom_delete("Hello World", "lWH")
