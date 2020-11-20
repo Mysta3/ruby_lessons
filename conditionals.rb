@@ -82,7 +82,7 @@
 
 # def rate_my_food(food)
 #     case food
-#     when "Steak" #when food == steak
+#     when "Steak" # OR -> when food == steak
 #         puts "Pass the steak sauce"
 #     when "Sushi"
 #         puts "this sushi is great"
