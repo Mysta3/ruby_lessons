@@ -497,3 +497,176 @@
 # [10, 1, 6, 4, 8, 10, 4].each_with_index do |number, i|
 #     puts number * i * 2
 # end
+
+
+# OBJECT POINTERS & OBJECT COPIES
+# a = [1,2,3]
+# p a.object_id # -> returns object's position in computer memory
+# b = a  
+# p b.object_id == a.object_id # -> returns true because b is a copy of a
+
+# # DUP METHOD
+# ## creates a seperate object
+# c = b.dup  
+# p c.object_id == b.object_id # -> returns false because c is a brand new object.
+
+# SPLAT ARGUMENTS
+## -> used when the number of arguments are unknown
+# def sum(*numbers) # splat argument is *numbers, will come in as an array
+#     sum = 0
+#     numbers.each { |num| sum += num}
+#     sum
+# end
+
+# p sum(1,2,5,4,8)
+# #research how to combine splat arguments with regular arguments
+
+# # ANY METHOD
+# ## predicate method that takes a block
+# ## if any is true then it will return out
+# p [1,3,5,7,2].any? do |num|
+#     num.odd?
+# end
+
+# p [1,2,4,5].all? {|num| num.odd?} #  -> returns false because there are even numbers in the array.
+
+# FIND AND DETECT METHODS
+## identical methods that have 2 different names
+## returns the first item that is true for the condition
+# words = %w[dictionary refrigerator platypus microwave]
+
+# p words.find {  |word| word.length > 10}
+# p words.detect {  |word| word.length > 8}
+
+# UNIQ METHOD
+## returns a new array with all duplicates removed
+## the bang (!) method to this uniq! will alter the original array
+
+# numbers =[1,1,1,2,2,3,4,6,7,8]
+# p numbers.uniq 
+
+# def custom_uniq(array)
+#     final = []
+#     array.each {|elem| final << elem unless final.include?(elem)}
+#     final
+# end
+
+# p custom_uniq(numbers)
+ 
+#COMPACT METHOD
+## -> removes all nil values from an array
+## has a bang version .compact!
+
+# arr = [1,2,3,nil,nil,4,5,6, false, true, nil]
+# p arr.compact 
+
+# def custom_compact(array)
+#     final = [] # -> define an empty array to hold values
+#     array.each {|elem| final << elem unless elem == nil} # -> push elem into final array unless elem is a nil value
+#     final  # -> return final array
+# end
+
+# p custom_compact(arr)
+
+#INJECT and REDUCE METHODS
+## identitcal methods that do the same thing
+### -> used when iterating over an array and need to keep track of the accumulative value
+## ex: rolling sum
+## array.reduce(starting value) do |previous, current|
+#    code
+## end
+
+# result = [10,20,30, 40].reduce(0) do |accum, curr|
+#     puts "previous value is: #{accum}"
+#     puts "current value is: #{curr}"
+#     accum + curr
+# end
+
+# p result
+
+# product = [3,6,9,10,55,22].reduce(1) do |prev, curr|
+#     puts "previous value is: #{prev}"
+#     puts "current value is: #{curr}"
+#     prev * curr
+# end
+
+# p product
+
+#FLATTEN METHOD
+## removes nested array and returns a 1-dimensional array
+## has a bang method
+
+# user = [["stacy", 20, false],["bob", 25, true], ["Lynell", 35, true]]
+
+# p user.flatten 
+
+#ZIP METHOD
+## combines elements of 1 or more arrays together based on a index
+## creates sub arrays based on similar indexex between 2+ arrays
+## can accept more than one array
+# names = ["bob", "stacy", "jeff"]
+# age = [25,32,6]
+# registrations = [true, false, false] 
+# # p names.zip(registrations, age)
+
+# def custom_zip(arr1,arr2)
+#     final = []
+#     arr1.each_with_index do |value, index|
+#         final << [value, arr2[index]]
+#     end
+#     final
+# end
+# p custom_zip(registrations, age)
+
+#SAMPLE METHOD
+## returns a random item within an array
+## accepts a nubmer as an argument, will return that number of random elements within the array. These elements will not be the same
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+# p numbers.sample()
+# p numbers.sample(2)
+
+#ASTERISK FOR MULTIPLYING AN ARRAY
+## returns the element x times within the array
+# p [1,2,3] * 5
+# ## 1,2,3 will be repeated 5 times in ths array
+
+# def custom_multiply(arr, num)
+#     result =[]
+#     num.times{ arr.each{|element| result << element}}
+#     result
+# end
+
+# p custom_multiply([1,2,5], 5)
+
+
+# UNION
+## combines multiple arrays into 1 while removing duplicates in the final array
+
+# arr1 = [1,2,3]
+# arr2 = [3,4,5]
+
+# p arr1 | arr2 # -> will return 1 array with no duplicates
+
+# def custom_union(arr1,arr2)
+#     arr1.dup.concat(arr2).uniq # -> creates a new object in memory, concats arr2, and removes duplicates
+# end
+
+# REMOVE VALUES FROM ARRAY
+# removed numbers specified on the left side from the right side of the array
+# p [1,2,2,2,2,3,4,5] - [2,3]
+
+# def custom_subtraction(arr1, arr2)
+#     final = []
+#     arr1.each {|value| final << value unless arr2.include?(value)}
+#     final
+# end
+
+# ARRRAY INTERSECTION
+# returns an array of common items that appear in both arrays
+# p [1,2,2,3] & [1,3,4,5,6]
+
+# def custom_intersection(arr1, arr2)
+#     final = []
+#     arr1.uniq.each { |el| final << el if arr2.include?(el)}
+#     final
+# end
