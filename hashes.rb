@@ -144,3 +144,108 @@
 
 # p stuff.keys
 # p stuff.values
+
+
+# HASH DEFAULT
+# numbers = Hash.new("Does not Exit") # ->  is now the default value
+# numbers[:one] = 1
+# numbers[:two] = 2
+# p numbers[:three] 
+# p numbers[:one] 
+
+# OR you can set it later 
+# numbers.default = "This number no longer exists"
+# -> default method does not use () instead you assign it a value
+# p numbers[:three] 
+
+# CONVERT TO ARRAY AND VICE VERSA
+# spice_girls = {scary: "Melanie Brown", sporty: "Melanie Chisholm", baby: "Emma Bunton", ginger: "Geri Halliwell" ,posh: "Victoria Beckham"}
+# p spice_girls.to_a # -> returns nested arrays
+# p spice_girls.to_a.flatten # -> returns regular array with no nested arrays
+
+# HASH -> ARRAY 
+# power_rangers = [[:red, "Jason"], [:black, "Zack"]]
+# p power_rangers.to_h
+
+# SORT METHODS
+## sorts by key
+## sort_by method helps you sort by value
+# pokemon = {squirtle: "Water", bulbasaur: "Grass", charizard: "Fire"}
+# p pokemon.sort 
+# p pokemon.sort.reverse  
+# puts "...."
+
+# p pokemon.sort_by { |pokemon, type| pokemon } # -> sort by keys
+# p pokemon.sort_by { |pokemon, type| pokemon }.reverse
+# p pokemon.sort_by { |pokemon, type| type } # -> sorting by values
+
+# KEY? and VALUE? methods
+## -> checks if keys or values are present within a hash
+# cars = {toyota: "camry", teslaX: "model x", teslaY: "model y"}
+
+# puts cars.key?(:teslaS)
+# puts cars.key?(:teslaX)
+# puts 
+# puts cars.value?("camry")
+# puts cars.value?("mustang")
+
+# HASHES AS METHOD ARGUMENTS\
+
+# def calc_tip(price, tip_percent)
+#    tip = (tip_percent / 100.0)
+#    total_tip = price * tip
+#    total_value_with_tip = (price + total_tip)
+# end
+
+# # p calc_tip(10, 10)
+# bill = {tip_percent: 10, price: 10}
+
+# def calc_tip2(info)
+#     tip = info[:tip_percent] / 100.0
+#     total_tip = info[:price] * tip
+#     total_value_with_tip = info[:price] + total_tip
+#     return  "Your Total is: #{total_value_with_tip}, with a tip of #{total_tip}"
+# end
+
+
+
+# p calc_tip2(bill)
+# p calc_tip2({tip_percent: 20, price: 55})
+# # -> if a hash is the last argument in  amethod then you do not need the curly braces
+# # -> only valid in method call
+
+# DELETE METHOD
+## -> permanently mutates the hash
+## cannot method chain
+# super_heroes = {spiderman: "Miles Morales", robin: "Dick Grayson"}
+# removed = super_heroes.delete{:robin}
+
+# SELECT AND REJECT METHODS
+## -> takes a black with 2 arguments
+# recipe = {sugar: 5, flour: 10, pepper: 4}
+# high = recipe.select { |key, values| values >= 5 }
+# p hig
+# low = recipe.reject { |key, values| values >= 5 }
+# p low.to_a.flatten
+
+# MERGE / COMBINING HASHES
+## accepts an arguyment like concat
+## does not permanently mutate an array
+# recipe = {sugar: 5, flour: 10, pepper: 4}
+# power_rangers = {red: "Jason", black: "Zack"}
+# merged_hash = recipe.merge(power_rangers)
+# p merged_hash
+
+# sentence = 'Bald head hoe over the open road hoe ahh trick ahhhh hoe ahhh bald ahhhh spit'
+
+# def word_count(string)
+#     words = string.split(" ") # -> split into array
+#     count = Hash.new(0) # -> init empty hash with a default value of 0
+#     words.each do |word| # -> iterate over the array
+#         count[word] += 1 # -> increment each key and store it in the new hash
+#     end
+#     count # -< print hash
+# end
+
+# p word_count(sentence)
+
