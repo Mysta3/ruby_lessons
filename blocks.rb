@@ -1,6 +1,7 @@
 #grooup collection of statements that immediately follow a method call
 #not an object
-#add on
+#add on to the method
+#specified with curly braces or do keyword
 
 #10.times #executes a process a certain number of times
 
@@ -26,3 +27,41 @@
 #     puts "#{3 * (i + 1)}"
 # end 
 
+
+#YIELD KEYWORD
+## transfers control from method to the block that it is within.
+## this keyword will stop the execution of the method until what is happening within the attached block is done.
+## blocks can be created using do end as well
+## do not write the return keyword in a block : this will produce an error
+# def pass_control
+#     puts "This is inside the method"
+#     yield # -> will come out of the method to execute what is in the attached block
+#     puts "Back inside the method"
+# end
+
+# pass_control { puts "Now I am inside the block"} # -> method with attached block
+
+# ## can pass a variable to yield
+# ## that variable will be whatver is in the attached block
+# def who_am_i
+#     adjective = yield
+#     puts "I am very #{adjective}"
+# end
+
+# who_am_i {"handsome"}
+# who_am_i do 
+#     "genius"
+# end
+
+## can yield multiple times
+# def multi_pass
+#     puts "Inside method"
+#     yield
+#     puts "Back inside the method!"
+#     yield
+# end
+
+# result = multi_pass { puts "Inside the block bihhh"} 
+# p result # -> returns nil because puts returns nil not the string
+# result = multi_pass { "Inside the block bihhh"} # -> returns the string
+# p result 
