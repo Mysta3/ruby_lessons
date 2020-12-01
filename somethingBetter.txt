@@ -1,0 +1,5 @@
+This is cool to create from ruby
+No line breaks bWOOOOW
+This is from append
+ -------- 
+I like puts better

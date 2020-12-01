@@ -91,8 +91,9 @@ p today.strftime("%B %d, %Y")
 
 # .parse and .strptime methods
 
-require 'time' # -> loads additional time feature that provides additional functionalities
+# require 'time' # -> loads additional time feature that provides additional functionalities
 
-p Time.parse("2020-12-01") # -> accepts a string argument, converts to a valid time object
+# p Time.parse("2020-12-01") # -> accepts a string argument, converts to a valid time object
 
-p Time.strptime("03-04-2020", "%m-%d-%Y") # -> format how to receive the date data
+# p Time.strptime("03-04-2020", "%m-%d-%Y") # -> format how to receive the date data
+
