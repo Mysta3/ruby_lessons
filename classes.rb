@@ -1014,24 +1014,25 @@ glossy = shiny
 # p boris.singleton_methods # -> returns singleton methods currently attached
 # p boris.singleton_class # -> returns singleton class
 
-class Candidate
-    attr_accessor :name, :age , :occupation, :hobby, :birthplace
-    def initialize(name,details = {}) # -> settinga default for the details hash
-        defaults = {age: 35, occupation: "Candidate", hobby: "Running", birthplace:"Canada"}
-        defaults.merge!(details)
+# class Candidate
+#     attr_accessor :name, :age , :occupation, :hobby, :birthplace
+#     def initialize(name,details = {}) # -> settinga default for the details hash
+#         defaults = {age: 35, occupation: "Candidate", hobby: "Running", birthplace:"Canada"}
+#         defaults.merge!(details)
 
-        @name = :name
-        @age = defaults[:age]
-        @occupation = defaults[:occupation]
-        @hobby = defaults[:hobby]
-        @birthplace = defaults[:birthplace]
-    end
-end
+#         @name = :name
+#         @age = defaults[:age]
+#         @occupation = defaults[:occupation]
+#         @hobby = defaults[:hobby]
+#         @birthplace = defaults[:birthplace]
+#     end
+# end
 
-senator = Candidate.new("Smith",age: 53, occupation: "Banker", birthplace: "Baltimore")
+# senator = Candidate.new("Smith",age: 53, occupation: "Banker", birthplace: "Baltimore")
 
-p senator.age
-p senator.occupation
-p senator.birthplace
-p senator.hobby
+# p senator.age
+# p senator.occupation
+# p senator.birthplace
+# p senator.hobby
+
 
